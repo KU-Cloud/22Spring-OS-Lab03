@@ -80,6 +80,9 @@ int lru(int* ref_arr, size_t ref_arr_sz, size_t frame_sz) {
         atimes[ref_arr[i]] = curr_time++;
     }
 
+    free(atimes);
+    free(frames);
+
     return page_faults;
 }
 
